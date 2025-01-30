@@ -79,17 +79,33 @@ struct WeatherView: View {
                         HStack {
                             VStack(alignment: .leading) {
                                 Text(city.name)
-                                    .font(.headline)
+                                    .font(.custom("Poppins", fixedSize: 20))
+                                    .foregroundColor(.black)
+                                    .bold()
+                                
                                 Text("\(city.region), \(city.country)")
                                     .font(.subheadline)
                                     .foregroundColor(.gray)
+                                
+                                if let temp = city.temperature {
+                                    Text("\(Int(temp))°")
+                                        .font(.custom("Poppins", fixedSize: 60))
+                                        .foregroundColor(.black)
+                                        .bold()
+                                }
                             }
+                            
                             Spacer()
-                            Image(systemName: "cloud.fill")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 40, height: 40)
-                                .foregroundColor(.blue)
+                            
+                            if let iconURL = city.weatherIcon {
+                                AsyncImage(url: URL(string: "https:\(iconURL)")) { image in
+                                    image.resizable()
+                                        .scaledToFit()
+                                } placeholder: {
+                                    ProgressView()
+                                }
+                                .frame(width: 83, height: 67)
+                            }
                         }
                         .padding()
                         .background(Color.gray.opacity(0.1))
@@ -101,6 +117,7 @@ struct WeatherView: View {
         }
     }
 
+
     // Weather Display UI
     private func weatherDisplay(_ weather: Weather) -> some View {
         VStack {
@@ -110,27 +127,33 @@ struct WeatherView: View {
             } placeholder: {
                 ProgressView()
             }
-            .frame(width: 120, height: 120)
+            .frame(width: 123, height: 113)
 
             
-            Text(weather.location.name)
-                .font(.title)
-                .bold()
+            HStack{
+                Text(weather.location.name)
+                    .font(.custom("Poppins", fixedSize: 30))
+                    .fontWeight(.heavy)
+                
+                Image(systemName: "location.fill") // SF Symbol for location
+                    .foregroundColor(.black) 
+            }
+            
             
             Text("\(weather.current.temp_c, specifier: "%.0f")°")
-                .font(.system(size: 60))
+                .font(.custom("Poppins", fixedSize: 70))
                 .bold()
             
-            HStack {
+            HStack(spacing : 16){
                 weatherDetail("Humidity", value: "\(weather.current.humidity)%")
                 Spacer()
                 weatherDetail("UV", value: String(format: "%.0f", weather.current.uv))
                 Spacer()
                 weatherDetail("Feels Like", value: String(format: "%.0f°", weather.current.feelslike_c))
             }
-            .padding()
-            .background(Color.gray.opacity(0.2))
-            .cornerRadius(10)
+            .padding(16)
+            .background(Color(hex: "#F2F2F2"))
+            .cornerRadius(16)
             .padding(.horizontal)
         }
     }
@@ -148,9 +171,14 @@ struct WeatherView: View {
 
     //Weather Detail Box
     private func weatherDetail(_ title: String, value: String) -> some View {
-        VStack {
+        VStack(spacing: 16){
             Text(title)
+                .font(.custom("Poppins", fixedSize: 12))
+                .foregroundColor(Color(hex: "#C4C4C4"))
+            
             Text(value).bold()
+                .font(.custom("Poppins", fixedSize: 15))
+                .foregroundColor(Color(hex: "#9A9A9A"))
         }
     }
 }

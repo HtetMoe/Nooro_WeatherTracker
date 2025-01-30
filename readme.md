@@ -97,7 +97,7 @@ WeatherTracker/
 ### **1. Core Technologies**
 - **Swift** & **SwiftUI** for UI development.
 - **MVVM architecture** for separation of concerns.
-- **Protocol-oriented programming** and dependency injection.
+- **Clean Architecture.**
 
 ### **2. API Handling**
 - Fetches weather data using `WeatherAPI.com`.

@@ -13,6 +13,6 @@ struct City: Codable, Identifiable {
     let region: String
     let country: String
     
-    var temperature: Double?  // fetched temperature
-    var weatherIcon: String?  // fetched weather icon URL
+    var temperature: Double?
+    var weatherIcon: String?
 }
