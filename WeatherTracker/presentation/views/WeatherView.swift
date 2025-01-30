@@ -38,6 +38,9 @@ struct WeatherView: View {
         }
     }
 
+    
+    //MARK: - components
+    
     //Search Bar UI (Only one search method used)
     private var searchBar: some View {
         HStack {
@@ -61,7 +64,6 @@ struct WeatherView: View {
         }
 
     }
-
 
     //Search Results List
     private var searchResultsView: some View {

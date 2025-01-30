@@ -11,7 +11,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		0DFD3AA32D498FD60004CE8E /* WeatherTracker */ = {
+		0D325CD92D4B158900962CF8 /* WeatherTracker */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = WeatherTracker;
 			sourceTree = "<group>";
@@ -32,7 +32,7 @@
 		0DFD3A982D498FD60004CE8E = {
 			isa = PBXGroup;
 			children = (
-				0DFD3AA32D498FD60004CE8E /* WeatherTracker */,
+				0D325CD92D4B158900962CF8 /* WeatherTracker */,
 				0DFD3AA22D498FD60004CE8E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,7 +61,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				0DFD3AA32D498FD60004CE8E /* WeatherTracker */,
+				0D325CD92D4B158900962CF8 /* WeatherTracker */,
 			);
 			name = WeatherTracker;
 			packageProductDependencies = (
@@ -260,6 +260,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -289,6 +290,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

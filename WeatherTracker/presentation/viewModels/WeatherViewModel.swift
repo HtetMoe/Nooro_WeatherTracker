@@ -29,6 +29,7 @@ class WeatherViewModel: ObservableObject {
         loadSavedCity() // Load saved city on app launch
     }
 
+    //fetch weather
     func fetchWeather(for city: String) {
         isLoading = true
         fetchWeatherUseCase.execute(city: city)
@@ -44,6 +45,7 @@ class WeatherViewModel: ObservableObject {
             .store(in: &cancellables)
     }
 
+    //search cities
     func searchCities(query: String) {
         searchCityUseCase.execute(query: query)
             .sink(receiveCompletion: { completion in
@@ -56,12 +58,13 @@ class WeatherViewModel: ObservableObject {
             .store(in: &cancellables)
     }
 
-    //UserDefaults
+    //save to UserDefaults
     private func saveCity(_ city: String) {
         UserDefaults.standard.set(city, forKey: "savedCity")
     }
 
   
+    //load selected city
     func loadSavedCity() {
         if let savedCity = UserDefaults.standard.string(forKey: "savedCity") {
             fetchWeather(for: savedCity)
