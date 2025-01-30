@@ -6,7 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0D325CFD2D4B270A00962CF8 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 0D325CFC2D4B270A00962CF8 /* readme.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		0D325CFC2D4B270A00962CF8 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		0DFD3AA12D498FD60004CE8E /* WeatherTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -32,6 +37,7 @@
 		0DFD3A982D498FD60004CE8E = {
 			isa = PBXGroup;
 			children = (
+				0D325CFC2D4B270A00962CF8 /* readme.md */,
 				0D325CD92D4B158900962CF8 /* WeatherTracker */,
 				0DFD3AA22D498FD60004CE8E /* Products */,
 			);
@@ -109,6 +115,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D325CFD2D4B270A00962CF8 /* readme.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
