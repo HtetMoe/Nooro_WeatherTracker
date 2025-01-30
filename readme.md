@@ -6,6 +6,11 @@ Weather Tracker is an iOS application that provides real-time weather informatio
 
 ---
 
+<p align="center">
+  <img src="WeatherTracker.gif" alt="Weather Animation" width="250">
+</p>
+
+
 ## **Features**
 
 ### **1. Home Screen**
@@ -122,3 +127,5 @@ WeatherTracker/
 
     Select a simulator or device.
     Press Cmd + R to run.
+
+
